@@ -1,0 +1,105 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+  font-family: "Josefin";
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+main {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, main, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+/*style*/
+
+header {
+  text-align: center;
+}
+aside a, main a {
+  color: #a66;
+}
+aside a:hover, main a:hover {
+  text-decoration: none;
+}
+.text-indent {
+  text-indent: 20px;
+}
+a.external:after {
+  background: url(images/link.png);
+  background-size: 10px;
+  content: "";
+  height: 10px;
+  margin-left: 3px;
+  width: 10px;
+}
+a.external:after {
+  display: inline-block;
+}
+::after {
+  box-sizing: border-box;
+}
+
+main ul, aside ul {
+  list-style-type: square;
+}
+
+main :not(h2), aside :not(h2) {
+  font-size: 13px;
+  line-height: 15px;
+}
+nav ul {
+  list-style-type: none;
+  width: 200px
+}
+nav li {
+  font-size: 20px;
+  border: solid 2px #a66;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  
+}
+nav a {
+  text-decoration: none;
+  color: #a66;
+}
+nav {
+  display: block;
+  text-align: center;
+}
+@font-face {
+  font-family: "Josefin";
+  src: url(fonts/JosefinSlab-Bold.ttf);
+}
