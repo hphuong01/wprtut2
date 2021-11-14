@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Input circle radius</p>
+    R = <input type="number" id="radius">
+    <button id="dBtn">Diameter</button>
+    <button id="cBtn">Circumference</button>
+    <button id="sBtn">Square</button>
+    <br>
+    <br>
+    <span id="result"></span>
+    <script>
+        let rNumber, dNumer, cNumber, sNumber;
+        let rNumberInput =document.getElementById("radius");
+        let dBtn = document.getElementById("dBtn");
+        let cBtn = document.getElementById("cBtn");
+        let sBtn = document.getElementById("sBtn");
+        let result = document.getElementById("result");
+
+        function getNumber(){
+            rNumber = parseFloat(rNumberInput.value);
+        }
+        dBtn.addEventListener('click', function(){
+            getNumber();
+            result.innerText = "Circle Diameter: " + (rNumber*2);
+        });
+        cBtn.addEventListener('click', function(){
+            getNumber();
+            result.innerText = "Circle Circumference: " + (rNumber*2*3.14);
+        });
+        sBtn.addEventListener('click', function(){
+            getNumber();
+            result.innerText = "Circle Square: " + (rNumber*rNumber*3.14);
+        });
+    </script>
+</body>
+</html>

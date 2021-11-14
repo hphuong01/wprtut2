@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Loan = <input type="number" id="loan">
+    Interest rate = <input type="number" id="rate">
+    Year = <input type="number" id="year">
+    <button id="resultBtn">Go</button>
+    <br>
+    <br>
+    <span id="result"></span>
+    <script>
+        let loanNumber, rateNumber, yearNumer;
+        let loanNumberInput =document.getElementById("loan");
+        let yearNumberInput =document.getElementById("year");
+        let rateNumberInput =document.getElementById("rate");
+        let resultBtn = document.getElementById("resultBtn");
+        let result = document.getElementById("result");
+
+        function getNumber(){
+            loanNumber = parseFloat(loanNumberInput.value);
+            rateNumber = parseFloat(rateNumberInput.value);
+            yearNumber = parseFloat(yearNumberInput.value);
+        }
+        resultBtn.addEventListener('click', function(){
+            getNumber();
+            result.innerText = "Total: " + (loanNumber *(1+yearNumer*rateNumber));
+        });
+    </script>
+</body>
+</html>

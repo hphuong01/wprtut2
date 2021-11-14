@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Receiver: <input type="text" id="name">
+    Location: <input type="text" id="location">
+    Date: <input type="text" id="date">
+    <button onclick="myFunction()" id="myFunction">Display it</button>
+    <p id="result"></p>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("name").value;
+            var y = document.getElementById("location").value;
+            var z = document.getElementById("date").value;
+            document.getElementById("dateDisplay").innerHTML=z;
+            document.getElementById("locationDisplay").innerHTML=y;
+            document.getElementById("nameDisplay").innerHTML=x;
+            document.getElementById("result").value = nameDisplay;
+        }
+    </script>
+</body>
+
+</html>

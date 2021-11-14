@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #move button {
+            outline: none;
+            background: transparent;
+            border: 1px solid transparent;
+        }
+
+        #move img {
+            width: 15px;
+            height: 15px;
+            padding: 7px;
+            border: 0.5px solid black;
+            border-radius: 5px;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 190px; height: 190px; border: 1px solid black;" id="game">
+        <div style="top: 19px; left: 19px;width: 19px; height: 19px; background-image: url('tank.png');background-size: 100% 100%;position: relative;"
+            id="tank">
+        </div>
+        <div style="top: 76px; left: 133px;width: 19px; height: 19px; background-image: url('boom.png');background-size: 100% 100%;position: relative;"
+            id="boom">
+        </div>
+    </div>
+    <div id="move">
+        <button onclick="moveUp()"><img src="up.png"/></button>
+        <button onclick="moveDown()"><img src="down.png"/></button>
+        <button onclick="moveRight()"><img src="right.png"/></button>
+        <button onclick="moveLeft()"><img src="left.png"/></button>
+    </div>
+    <script>
+        function moveLeft() {
+          let img = document.getElementById('tank');
+          img.style.left = `${img.offsetLeft - 19}px`;
+        }
+        
+        function moveRight() {
+          let img = document.getElementById('tank');
+          img.style.left = `${img.offsetLeft + 19}px`;
+        }
+        
+        function moveUp() {
+          let img = document.getElementById('tank');
+          img.style.top = `${img.offsetTop - 19}px`;
+        }
+        
+        function moveDown() {
+          let img = document.getElementById('tank');
+          img.style.top = `${img.offsetTop + 19}px`;
+        }
+        
+        function A() {
+          document.getElementById('tank').style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
