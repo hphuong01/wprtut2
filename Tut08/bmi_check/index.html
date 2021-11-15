@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BMI Checker</h1>
+    <button onclick="check()">Try it</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            var weight = prompt("Please enter your weight (kg)", "0");
+            var height = prompt("Please enter your height (m)", "0");
+            x = parseFloat(weight);
+            y = parseFloat(height);
+            if (x != null && y != null) {
+                if ((x/y*y) < 16){
+                    document.getElementById("result").innerHTML = "Underweight level III";
+                }
+                else if ((x/y*y) >= 16 && (x/y*y) <17){
+                    document.getElementById("result").innerHTML = "Underweight level II";
+                }
+                else if ((x/y*y) >= 17 && (x/y*y) <18.5){
+                    document.getElementById("result").innerHTML = "Underweight level I";
+                }
+                else if ((x/y*y) >= 18.5 && (x/y*y) <25){
+                    document.getElementById("result").innerHTML = "Normal";
+                }
+                else if ((x/y*y) >= 25 && (x/y*y) <30){
+                    document.getElementById("result").innerHTML = "Overweight";
+                }
+                else if ((x/y*y) >= 30 && (x/y*y) <35){
+                    document.getElementById("result").innerHTML = "Overweight level I";
+                }
+                else if ((x/y*y) >= 35 && (x/y*y) <40){
+                    document.getElementById("result").innerHTML = "Underweight level II";
+                }
+                else {
+                    document.getElementById("result").innerHTML = "Overweight level III";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
